@@ -1,0 +1,62 @@
+Auto-merging src/run_all_fingerprints.py
+Merge made by the 'ort' strategy.
+ .gitignore                                    |    1 -
+ README.md                                     |   11 +-
+ data/cyclo/b2r2_l_10_fold_subset4xtb.npy      |  Bin 208 -> 0 bytes
+ data/cyclo/b2r2_l_10_fold_xtb.npy             |  Bin 208 -> 208 bytes
+ data/cyclo/b2r2_l_subset4xtb.npy              |  Bin 31279376 -> 0 bytes
+ data/cyclo/b2r2_l_xtb.npy                     |  Bin 31279376 -> 34129496 bytes
+ data/cyclo/slatm_10_fold_subset4xtb.npy       |  Bin 208 -> 0 bytes
+ data/cyclo/slatm_10_fold_xtb.npy              |  Bin 208 -> 208 bytes
+ data/cyclo/xtb_bad_idx.dat                    |  495 --------------------------------------------------------------------------
+ data/gdb7-22-ts/b2r2_l_10_fold_subset4xtb.npy |  Bin 208 -> 0 bytes
+ data/gdb7-22-ts/b2r2_l_10_fold_xtb.npy        |  Bin 208 -> 208 bytes
+ data/gdb7-22-ts/b2r2_l_subset4xtb.npy         |  Bin 40862144 -> 0 bytes
+ data/gdb7-22-ts/b2r2_l_xtb.npy                |  Bin 40862144 -> 44010848 bytes
+ data/gdb7-22-ts/slatm_10_fold_subset4xtb.npy  |  Bin 208 -> 0 bytes
+ data/gdb7-22-ts/slatm_10_fold_xtb.npy         |  Bin 208 -> 208 bytes
+ data/gdb7-22-ts/xtb_bad_idx.dat               | 1012 --------------------------------------------------------------------------------------------------------------------------------------------------------
+ data/hypers.py                                |   28 ++---
+ data/proparg/b2r2_l_10_fold_xtb.npy           |  Bin 208 -> 208 bytes
+ data/proparg/b2r2_l_xtb.npy                   |  Bin 4933784 -> 4933784 bytes
+ data/proparg/slatm_10_fold.npy                |  Bin 208 -> 208 bytes
+ data/proparg/slatm_10_fold_xtb.npy            |  Bin 208 -> 208 bytes
+ equireact-results/cyclo_dft.csv               |   20 +--
+ equireact-results/cyclo_xtb.csv               |   20 +--
+ equireact-results/gdb_dft.csv                 |   20 +--
+ equireact-results/gdb_xtb.csv                 |   20 +--
+ equireact-results/proparg_dft.csv             |   20 +--
+ equireact-results/proparg_xtb.csv             |   20 +--
+ figures/atom_mapping_quality.pdf              |  Bin 30684 -> 26325 bytes
+ figures/compare_all_models.pdf                |  Bin 30779 -> 30785 bytes
+ figures/compare_all_models_xtb.pdf            |  Bin 31482 -> 31477 bytes
+ make_plots/compare_fingerprints_and_nn.py     |    2 -
+ make_plots/compare_xtb.py                     |   18 +--
+ requirements.txt                              |  103 ----------------
+ src/b2r2.py                                   |  407 ++++++++++++++++++++++++++++++++++++++-----------------------
+ src/learning.py                               |    2 +-
+ src/reaction_reps.py                          |  613 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++---------------------------
+ src/run_all_fingerprints.py                   |   20 +--
+ src/timing_fingerprints.py                    |    4 +-
+ tests/data/b2r2_a.npy                         |  Bin 299648 -> 0 bytes
+ tests/data/b2r2_l.npy                         |  Bin 119936 -> 0 bytes
+ tests/data/b2r2_n.npy                         |  Bin 60032 -> 0 bytes
+ tests/data/slatm_d.npy                        |  Bin 1681024 -> 0 bytes
+ tests/test_b2r2.py                            |   30 -----
+ tests/test_slatm-d.py                         |   17 ---
+ 44 files changed, 777 insertions(+), 2106 deletions(-)
+ delete mode 100644 data/cyclo/b2r2_l_10_fold_subset4xtb.npy
+ delete mode 100644 data/cyclo/b2r2_l_subset4xtb.npy
+ delete mode 100644 data/cyclo/slatm_10_fold_subset4xtb.npy
+ delete mode 100644 data/cyclo/xtb_bad_idx.dat
+ delete mode 100644 data/gdb7-22-ts/b2r2_l_10_fold_subset4xtb.npy
+ delete mode 100644 data/gdb7-22-ts/b2r2_l_subset4xtb.npy
+ delete mode 100644 data/gdb7-22-ts/slatm_10_fold_subset4xtb.npy
+ delete mode 100644 data/gdb7-22-ts/xtb_bad_idx.dat
+ delete mode 100644 requirements.txt
+ delete mode 100644 tests/data/b2r2_a.npy
+ delete mode 100644 tests/data/b2r2_l.npy
+ delete mode 100644 tests/data/b2r2_n.npy
+ delete mode 100644 tests/data/slatm_d.npy
+ delete mode 100644 tests/test_b2r2.py
+ delete mode 100644 tests/test_slatm-d.py

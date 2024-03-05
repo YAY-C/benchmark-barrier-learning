@@ -1,3 +1,24 @@
+################# FIX SAVED RESULTS #####################
+Running for cyclo dataset
+reps generated/loaded, predicting
+drfp mae 5.951688330183364 +- 0.11817789517245009
+mfp mae 3.5639621048298986 +- 0.1413063169780567
+slatm mae 2.6988431243139153 +- 0.11313381723783482
+b2r2_l mae 3.811205301070293 +- 0.14643284177107035
+Running for gdb dataset
+reps generated/loaded, predicting
+drfp mae 15.260505894869805 +- 0.352145708636879
+mfp mae 9.967113038752156 +- 0.2076321686382398
+slatm mae 6.9115545605264455 +- 0.21752338762955056
+b2r2_l mae 9.191080133000945 +- 0.2619000347374769
+Running for proparg dataset
+reps generated/loaded, predicting
+drfp mae 1.6552916147193066 +- 0.0670548344761374 ######## MISSMATCH WITH OVERLEAF
+mfp mae 1.4977133493826176 +- 0.1294953002254087
+slatm mae 0.35090565826709236 +- 0.05887146883763655
+b2r2_l mae 0.5373659094875679 +- 0.08027308567801955
+#############################################################
+
 ###### FIX XTB SAVED RESULTS #######
 Running for cyclo dataset
 reps generated/loaded, predicting
@@ -19,22 +40,143 @@ slatm mae 0.7219180164785525 +- 0.07514197423166903
 b2r2_l mae 1.051996745429609 +- 0.09887255427612646
 ##########################################################
 
-################# FIX SAVED RESULTS #####################
-Running for cyclo dataset
-reps generated/loaded, predicting
-drfp mae 5.951688330183364 +- 0.11817789517245009
-mfp mae 3.5639621048298986 +- 0.1413063169780567
-slatm mae 2.6988431243139153 +- 0.11313381723783482
-b2r2_l mae 3.811205301070293 +- 0.14643284177107035
-Running for gdb dataset
-reps generated/loaded, predicting
-drfp mae 15.260505894869805 +- 0.352145708636879
-mfp mae 9.967113038752156 +- 0.2076321686382398
-slatm mae 6.9115545605264455 +- 0.21752338762955056
-b2r2_l mae 9.191080133000945 +- 0.2619000347374769
+###### PREDICTING ON PROPARG (OK) ######################
 Running for proparg dataset
 reps generated/loaded, predicting
-drfp mae 1.6552916147193066 +- 0.0670548344761374 ######## MISSMATCH WITH OVERLEAF
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 50}
+drfp mae 1.5348676423409062 +- 0.12497800429391881   ########## MATCHES OVERLEAF NOW (WRONG PREVIOUS RESULTS?)
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 477}
 mfp mae 1.4977133493826176 +- 0.1294953002254087
-slatm mae 0.35090565826709236 +- 0.05887146883763655
-b2r2_l mae 0.5373659094875679 +- 0.08027308567801955
+Getting MAES for slatm..
+Hypers for slatm read from file. Kernel: laplacian, sigma/gamma: 0.01, l2reg: 1e-10
+slatm mae 0.3509056582672522 +- 0.05887146883773835
+Getting MAEs for b2r2..
+Hypers for b2r2 read from file. Kernel: laplacian, sigma/gamma: 1e-05, l2reg: 1e-10
+b2r2_l mae 0.5373659094887862 +- 0.08027308567943912
+#################################################
+
+###### PREDICTING ON PROPARG TRAIN=0.7 ######################
+Running for proparg dataset
+reps generated/loaded, predicting
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 50}
+drfp mae 1.6165243943116738 +- 0.06160135486669452
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 477}
+mfp mae 1.5662078520690428 +- 0.06907778120457256
+Getting MAES for slatm..
+Hypers for slatm read from file. Kernel: laplacian, sigma/gamma: 0.01, l2reg: 1e-10
+slatm mae 0.37519152972406145 +- 0.03300550861377354
+Getting MAEs for b2r2..
+Hypers for b2r2 read from file. Kernel: laplacian, sigma/gamma: 1e-05, l2reg: 1e-10
+b2r2_l mae 0.56923542814974 +- 0.04817472160410944
+################################################################
+
+###### PREDICTING ON PROPARG TRAIN=0.9 ######################
+Running for proparg dataset
+reps generated/loaded, predicting
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 50}
+drfp mae 1.5408368486340729 +- 0.16547965379821192
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 477}
+mfp mae 1.5016275739742841 +- 0.16721019868331657
+Getting MAES for slatm..
+Hypers for slatm read from file. Kernel: laplacian, sigma/gamma: 0.01, l2reg: 1e-10
+slatm mae 0.344562918422641 +- 0.07655552775113493
+Getting MAEs for b2r2..
+Hypers for b2r2 read from file. Kernel: laplacian, sigma/gamma: 1e-05, l2reg: 1e-10
+b2r2_l mae 0.528649332112194 +- 0.09727668643458097
+############################################################################
+
+####### GENERATING 2D REPS FOR PROPARG (OK) #################
+Running for proparg dataset
+reps generated/loaded, predicting
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 50}
+drfp mae 1.5348676423409062 +- 0.12497800429391881
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 477}
+mfp mae 1.4977133493826176 +- 0.1294953002254087
+Getting MAES for slatm..
+Hypers for slatm read from file. Kernel: laplacian, sigma/gamma: 0.01, l2reg: 1e-10
+slatm mae 0.3509056582672522 +- 0.05887146883773835
+Getting MAEs for b2r2..
+Hypers for b2r2 read from file. Kernel: laplacian, sigma/gamma: 1e-05, l2reg: 1e-10
+b2r2_l mae 0.5373659094887862 +- 0.08027308567943912
+#######################################################################
+
+###### PREDICTING ON CYCLO (OK) ######################
+Running for cyclo dataset
+reps generated/loaded, predicting
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 80, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 294}
+drfp mae 5.951688330183364 +- 0.11817789517245009
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 233}
+mfp mae 3.5639621048298986 +- 0.1413063169780567
+Getting MAES for slatm..
+Hypers for slatm read from file. Kernel: laplacian, sigma/gamma: 0.001, l2reg: 1e-10
+slatm mae 2.6988431243141484 +- 0.11313381723900941
+Getting MAEs for b2r2..
+Hypers for b2r2 read from file. Kernel: laplacian, sigma/gamma: 0.0001, l2reg: 1e-10
+b2r2_l mae 3.811205301070269 +- 0.1464328417710562
+##################################################
+
+
+############# PREDICTING ON ALL DATASETS #############################
+Running for cyclo dataset
+reps generated/loaded, predicting
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 80, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 294}
+drfp mae 5.951688330183364 +- 0.11817789517245009
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 233}
+mfp mae 3.5639621048298986 +- 0.1413063169780567
+Getting MAES for slatm..
+Hypers for slatm read from file. Kernel: laplacian, sigma/gamma: 0.001, l2reg: 1e-10
+slatm mae 2.6988431243141484 +- 0.11313381723900941
+Getting MAEs for b2r2..
+Hypers for b2r2 read from file. Kernel: laplacian, sigma/gamma: 0.0001, l2reg: 1e-10
+b2r2_l mae 3.811205301070269 +- 0.1464328417710562
+Running for gdb dataset
+reps generated/loaded, predicting
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 70, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 172}
+drfp mae 15.260505894869805 +- 0.352145708636879
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 90, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 355}
+mfp mae 9.967113038752156 +- 0.2076321686382398
+Getting MAES for slatm..
+Hypers for slatm read from file. Kernel: laplacian, sigma/gamma: 0.01, l2reg: 1e-10
+slatm mae 6.9115545605269775 +- 0.21752338763027154
+Getting MAEs for b2r2..
+Hypers for b2r2 read from file. Kernel: laplacian, sigma/gamma: 0.0001, l2reg: 0.0001
+b2r2_l mae 9.191080133002085 +- 0.26190003473741547
+Running for proparg dataset
+reps generated/loaded, predicting
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 50}
+drfp mae 1.5348676423409062 +- 0.12497800429391881
+Using hypers from file...
+using opt hyperparams best={'bootstrap': False, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 477}
+mfp mae 1.4977133493826176 +- 0.1294953002254087
+Getting MAES for slatm..
+Hypers for slatm read from file. Kernel: laplacian, sigma/gamma: 0.01, l2reg: 1e-10
+slatm mae 0.3509056582672522 +- 0.05887146883773835
+Getting MAEs for b2r2..
+Hypers for b2r2 read from file. Kernel: laplacian, sigma/gamma: 1e-05, l2reg: 1e-10
+b2r2_l mae 0.5373659094887862 +- 0.08027308567943912
+# (ALL FINE, WITHIN NUM ERROR OR STD)
+#----->	modified:   data/cyclo/b2r2_l_10_fold.npy
+#----->	modified:   data/cyclo/slatm_10_fold.npy
+#----->	modified:   data/gdb7-22-ts/b2r2_l_10_fold.npy
+#----->	modified:   data/gdb7-22-ts/slatm_10_fold.npy
+#----->	modified:   data/proparg/b2r2_l_10_fold.npy
+#----->	modified:   data/proparg/drfp_10_fold.npy
+#----->	modified:   data/proparg/slatm_10_fold.npy
+#####################################################################################3
+
+

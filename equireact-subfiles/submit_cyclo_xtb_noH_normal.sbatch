@@ -7,7 +7,7 @@
 #SBATCH --mem=8GB
 #SBATCH --time=72:00:00
 #SBATCH --job-name=cyclo-xtb
-#SBATCH --array=1
+#SBATCH --array=0-9
 #SBATCH --exclude=i39
 
 SEED=$(( $SLURM_ARRAY_TASK_ID + 123 ))
@@ -20,7 +20,7 @@ python -c 'import torch; print(torch.cuda.is_available())'
 wandb disabled
 python train.py --device cuda              \
                 --experiment_name benchmark-cyclo-xtb \
-                --CV 10                     \
+                --CV 1                     \
                 --num_epochs 512           \
                 --seed ${SEED}             \
                 --dataset "cyclo"          \

@@ -45,7 +45,7 @@ dependencies:
       - pyparsing==3.1.1
       - python-dateutil==2.9.0.post0
       - pytz==2024.1
-      - qml==0.4.0.27
+        #- qml==0.4.0.27
       - rdkit==2023.3.3
       - rdkit-pypi==2022.9.5
       - scikit-learn==1.4.1.post1
